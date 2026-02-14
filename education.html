@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education | Hepsiba</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f3d2e,#1c6b52,#0f3d2e);
+    background-size: 300% 300%;
+    animation: bgMove 12s infinite alternate;
+    color: white;
+}
+
+/* GRADIENT ANIMATION */
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #d2f5e8;
+}
+
+.nav .active {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+/* HERO */
+.education-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.education-hero h1 {
+    font-size: 70px;
+    margin: 0;
+    color: #9ff0d2;
+}
+
+.education-hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #d9f5ea;
+}
+
+/* TIMELINE SECTION */
+.education-container {
+    padding: 60px;
+    display: grid;
+    gap: 40px;
+}
+
+/* GLASS CARD */
+.edu-card {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 35px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* ICON */
+.edu-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edu-icon i {
+    font-size: 28px;
+    color: #7df5c9;
+}
+
+/* TEXT */
+.edu-content h2 {
+    margin: 0;
+}
+
+.edu-content p {
+    color: #c8f5e3;
+}
+
+/* HOVER EFFECT */
+.edu-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* SCROLL ANIMATION SHOW */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #d2f5e8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="nav">
+    <div class="logo">Hepsiba</div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="skills.html" >Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="education-hero">
+    <h1>My Education</h1>
+    <p>
+        My academic journey and achievements that shaped my technical foundation
+        and passion for development.
+    </p>
+</section>
+
+<section class="education-container">
+
+    <div class="edu-card">
+        <div class="edu-icon">
+            <i class="fas fa-university"></i>
+        </div>
+        <div class="edu-content">
+            <h2>BSc — Aditya Degree College</h2>
+            <p>2023 – 2026 • Aggregate: 90%</p>
+        </div>
+    </div>
+
+    <div class="edu-card">
+        <div class="edu-icon">
+            <i class="fas fa-school"></i>
+        </div>
+        <div class="edu-content">
+            <h2>Intermediate — Sri Chaitanya</h2>
+            <p>2021 – 2023 • Aggregate: 87%</p>
+        </div>
+    </div>
+
+    <div class="edu-card">
+        <div class="edu-icon">
+            <i class="fas fa-book"></i>
+        </div>
+        <div class="edu-content">
+            <h2>SSC — C.V Raman School</h2>
+            <p>2020 – 2021 • Aggregate: 98%</p>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Hepsiba | Portfolio
+</footer>
+
+<script>
+
+/* Scroll reveal animation like example image */
+const cards = document.querySelectorAll(".edu-card");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+cards.forEach(card => observer.observe(card));
+
+</script>
+
+</body>
+</html>

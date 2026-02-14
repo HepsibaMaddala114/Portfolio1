@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Hepsiba</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+
+<style>
+
+/* BODY — same gradient as education page */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f3d2e,#1c6b52,#0f3d2e);
+    background-size: 300% 300%;
+    animation: bgMove 12s infinite alternate;
+    color: white;
+}
+
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #d2f5e8;
+}
+
+.nav .active {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+/* INTRO */
+.skills-intro {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.skills-intro h1 {
+    font-size: 70px;
+    margin: 0;
+    color: #9ff0d2;
+}
+
+.skills-intro p {
+    max-width: 650px;
+    margin: auto;
+    color: #d9f5ea;
+}
+
+/* SKILLS GRID */
+.skills-section {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 35px;
+}
+
+/* GLASS SKILL CARDS */
+.skill-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.skill-card i {
+    font-size: 32px;
+    color: #7df5c9;
+    margin-bottom: 15px;
+}
+
+.skill-card h2 {
+    margin: 0 0 15px;
+}
+
+.skill-card ul {
+    padding-left: 18px;
+    color: #c8f5e3;
+}
+
+/* HOVER */
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* SCROLL REVEAL */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* PROGRESS BARS */
+.progress {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 0;
+    background: linear-gradient(90deg,#7df5c9,#3bd6a6);
+    border-radius: 20px;
+    transition: 1.6s;
+}
+
+/* CIRCULAR METERS */
+.circular {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: conic-gradient(#7df5c9 0%, rgba(255,255,255,0.1) 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #d2f5e8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="nav">
+    <div class="logo">Hepsiba</div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="skills-intro">
+    <h1>My Skills</h1>
+    <p>
+        I am a passionate learner and aspiring web developer with a strong foundation in
+        programming, web technologies, and problem-solving.
+    </p>
+</section>
+
+<section class="skills-section">
+
+    <div class="skill-card">
+        <i class="fas fa-code"></i>
+        <h2>Web Development</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+        </ul>
+
+        <div class="progress"><div class="progress-bar" data-width="95%"></div></div>
+    </div>
+
+    <div class="skill-card">
+        <i class="fas fa-laptop-code"></i>
+        <h2>Programming</h2>
+        <ul>
+            <li>C</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Problem Solving</li>
+        </ul>
+
+        <div class="progress"><div class="progress-bar" data-width="88%"></div></div>
+    </div>
+
+    <div class="skill-card">
+        <i class="fas fa-database"></i>
+        <h2>Database</h2>
+        <ul>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+        </ul>
+
+        <div class="circular">
+            <div class="circle" data-value="85">MySQL</div>
+            <div class="circle" data-value="75">Mongo</div>
+        </div>
+    </div>
+
+    <div class="skill-card">
+        <i class="fas fa-tools"></i>
+        <h2>Tools & Technologies</h2>
+        <ul>
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+            <li>MySQL Workbench</li>
+        </ul>
+
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+    </div>
+
+    <div class="skill-card">
+        <i class="fas fa-users"></i>
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Adaptability</li>
+            <li>Time Management</li>
+        </ul>
+
+        <div class="progress"><div class="progress-bar" data-width="92%"></div></div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Hepsiba | Portfolio
+</footer>
+
+<script>
+
+/* Scroll reveal */
+const skills = document.querySelectorAll(".skill-card");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+skills.forEach(card => observer.observe(card));
+
+/* Animate progress bars */
+const bars = document.querySelectorAll(".progress-bar");
+
+setTimeout(()=>{
+    bars.forEach(bar=>{
+        bar.style.width = bar.dataset.width;
+    });
+},600);
+
+/* Circular meters animation */
+document.querySelectorAll(".circle").forEach(circle=>{
+    let value = circle.dataset.value;
+    circle.style.background =
+      `conic-gradient(#7df5c9 ${value}%, rgba(255,255,255,0.1) ${value}%)`;
+});
+
+</script>
+
+</body>
+</html>

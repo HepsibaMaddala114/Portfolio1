@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me | Hepsiba</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* SAME GLOBAL BACKGROUND */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f3d2e,#1c6b52,#0f3d2e);
+    background-size: 300% 300%;
+    animation: bgMove 12s infinite alternate;
+    color: white;
+}
+
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* NAVBAR — SAME AS OTHER PAGES */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #d2f5e8;
+}
+
+.nav .active {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 80px 100px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* PROFILE IMAGE — GLASS STYLE */
+.about-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: rgba(255,255,255,0.08);
+    padding: 8px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ABOUT CONTENT GLASS CARD */
+.about-content {
+    max-width: 620px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.about-content:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.about-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #9ff0d2;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #c8f5e3;
+}
+
+/* DETAILS */
+.about-details {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.about-details li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #d9f5ea;
+}
+
+.about-details i {
+    margin-right: 10px;
+    color: #7df5c9;
+}
+
+/* FOOTER — SAME STYLE */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #d2f5e8;
+}
+
+/* SCROLL REVEAL ANIMATION */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="nav">
+    <div class="logo">Hepsiba</div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+<section class="about-section">
+<div class="about-container">
+
+<div class="about-image">
+    <img src="C:\Users\MADHAV\Desktop\FullStack\port\hepsi.jpeg" alt="Hepsiba Maddala" id="profileImg">
+</div>
+
+<div class="about-content" id="aboutText">
+    <h1>About Me</h1>
+
+    <p>
+        Hello! I'm <strong>Hepsiba Maddala</strong>, a BSc graduate from 
+        <strong>Aditya Degree College, Amalapuram</strong>.
+    </p>
+
+    <p>
+        I am passionate about web development and enjoy creating clean,
+        responsive, and user-friendly websites. I am continuously learning
+        new technologies to improve my technical skills and build better projects.
+    </p>
+
+    <p>
+        I have foundational knowledge in <strong>HTML, CSS, JavaScript, Python, and C</strong>.
+        I am a quick learner, adaptable, and always eager to grow in the IT field.
+    </p>
+
+    <ul class="about-details">
+        <li><i class="fas fa-user"></i> <strong>Name:</strong> Hepsiba Maddala</li>
+        <li><i class="fas fa-graduation-cap"></i> <strong>Degree:</strong> BSc</li>
+        <li><i class="fas fa-university"></i> <strong>College:</strong> Aditya Degree College</li>
+        <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Amalapuram, Andhra Pradesh</li>
+    </ul>
+</div>
+
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 Hepsiba | All Rights Reserved</p>
+</footer>
+
+<script>
+
+/* SCROLL REVEAL SAME AS EDUCATION & SKILLS */
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+observer.observe(document.getElementById("profileImg"));
+observer.observe(document.getElementById("aboutText"));
+
+</script>
+
+</body>
+</html>

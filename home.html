@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hepsiba | Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* BODY — same as education page */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f3d2e,#1c6b52,#0f3d2e);
+    background-size: 300% 300%;
+    animation: bgMove 12s infinite alternate;
+    color: white;
+}
+
+/* GRADIENT ANIMATION */
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #d2f5e8;
+}
+
+.nav-links .active {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    margin: 0;
+    color: #9ff0d2;
+}
+
+.hero-text p {
+    max-width: 500px;
+    color: #d9f5ea;
+}
+.typing {
+    font-size: 32px;
+    color: #9ff0d2;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #7df5c9;
+    display: inline-block;
+    animation: typing 4s steps(18, end) forwards,
+               blink 0.7s infinite;
+}
+
+/* typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* cursor blinking */
+@keyframes blink {
+    0% { border-color: transparent }
+    50% { border-color: #7df5c9 }
+    100% { border-color: transparent }
+}
+
+
+
+/* IMAGE */
+.hero-img img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: rgba(255,255,255,0.08);
+    padding: 8px;
+    transition: 0.4s;
+}
+
+.hero-img img:hover {
+    transform: scale(1.05);
+}
+
+/* HIGHLIGHT SECTION */
+.highlight {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 35px;
+}
+
+/* SAME GLASS CARD STYLE */
+.highlight-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* ICON */
+.highlight-card i {
+    font-size: 32px;
+    color: #7df5c9;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.highlight-card h3 {
+    margin: 0 0 10px;
+}
+
+.highlight-card p {
+    color: #c8f5e3;
+}
+
+/* HOVER */
+.highlight-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* SCROLL ANIMATION */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #d2f5e8;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR (same structure as education page) -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Hepsiba</div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>
+                Hi. I'm Hepsiba<br>
+            </h1>
+
+            <h2 class="typing">Frontend Developer</h2>
+
+            <p>
+                I'm passionate about crafting experiences that are engaging,
+                accessible, and user-centric.
+            </p>
+        </div>
+
+        <!-- profile image -->
+        <div class="hero-img">
+            <img src="C:\Users\MADHAV\Desktop\FullStack\port\hepsi.jpeg" alt="Hepsiba Photo" width="230" height="230" style="border-radius:50%; object-fit:cover;">
+        </div>
+
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlight">
+
+        <div class="highlight-card">
+            <i class="fas fa-code"></i>
+            <h3>Web Development</h3>
+            <p>
+                I build dynamic and responsive websites using frontend and backend technologies.
+            </p>
+        </div>
+
+        <div class="highlight-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Programming Skills</h3>
+            <p>
+                Skilled in Python, Java, problem solving and debugging.
+            </p>
+        </div>
+
+        <div class="highlight-card">
+            <i class="fas fa-users"></i>
+            <h3>Soft Skills</h3>
+            <p>
+                Communication, teamwork, adaptability and leadership.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Footer (same as other pages) -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Hepsiba  | All Rights Reserved</p>
+
+            <div class="social-links">
+                <a href="https://instagram.com/hepsiba_maddala" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+<script>
+
+/* page fade load */
+window.onload=()=>{
+    document.body.style.opacity="1";
+}
+
+/* scroll reveal */
+const cards=document.querySelectorAll(".highlight-card");
+
+window.addEventListener("scroll",()=>{
+    cards.forEach(card=>{
+        const top=card.getBoundingClientRect().top;
+        if(top < window.innerHeight-100){
+            card.classList.add("show");
+        }
+    });
+});
+
+/* page transitions */
+document.querySelectorAll("a").forEach(link=>{
+    link.addEventListener("click",function(e){
+        if(this.href.includes(".html")){
+            e.preventDefault();
+            document.body.style.opacity="0";
+            setTimeout(()=>{
+                window.location=this.href;
+            },400);
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
